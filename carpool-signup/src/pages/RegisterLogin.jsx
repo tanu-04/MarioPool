@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 
 const RegisterLogin = () => {
   // State to store the form data
   const [registerData, setRegisterData] = useState({
-    fullName: '',
-    email: '',
-    password: '',
-    homeAddress: '',
-    company: '',
+    fullName: "",
+    email: "",
+    password: "",
+    homeAddress: "",
+    company: "",
     termsAgreed: false,
   });
 
@@ -17,7 +17,7 @@ const RegisterLogin = () => {
     const { name, value, type, checked } = e.target;
     setRegisterData({
       ...registerData,
-      [name]: type === 'checkbox' ? checked : value,
+      [name]: type === "checkbox" ? checked : value,
     });
   };
 
@@ -25,21 +25,30 @@ const RegisterLogin = () => {
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
     try {
+<<<<<<< HEAD
       const response = await axios.post('http://localhost:5000/signup', registerData); // Ensure this matches your API
       console.log('User registered successfully:', response.data);
       alert('Registration successful!');
+=======
+      const response = await axios.post(
+        "http://localhost:5000/signup",
+        registerData
+      ); // Ensure this matches your API
+      console.log("User registered successfully:", response.data);
+      alert("Registration successful!");
+>>>>>>> 2ab4b39c9d9c9f1ad60f026e00ae9c914f19f81b
       // Optionally reset form after successful registration
       setRegisterData({
-        fullName: '',
-        email: '',
-        password: '',
-        homeAddress: '',
-        company: '',
+        fullName: "",
+        email: "",
+        password: "",
+        homeAddress: "",
+        company: "",
         termsAgreed: false,
       });
     } catch (error) {
-      console.error('Error registering user:', error);
-      alert('Registration failed.');
+      console.error("Error registering user:", error);
+      alert("Registration failed.");
     }
   };
 
@@ -97,7 +106,7 @@ const RegisterLogin = () => {
             checked={registerData.termsAgreed}
             onChange={handleInputChange}
             required
-          />{' '}
+          />{" "}
           I agree to the terms and conditions
         </label>
         <button type="submit">Register</button>
