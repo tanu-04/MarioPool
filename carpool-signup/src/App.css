@@ -1,0 +1,195 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f4f4f4; /* Keeping the background color as is */
+}
+
+header {
+  background: #852B56; /* Updated header color */
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.5em; /* Logo size */
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0; /* Ensure padding is reset */
+}
+
+.navbar ul li {
+  display: inline; /* Inline display for navbar items */
+  margin: 0 15px; /* Adjusted margin */
+}
+
+.navbar ul li a {
+  color: #fff; /* Updated link color */
+  text-decoration: none;
+  font-weight: bold; /* Made link text bold */
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Hero Section */
+.hero {
+  background: #758173; /* Blue */
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0; /* Removed margin for consistency */
+}
+
+/* Features Overview */
+.feature-grid {
+  display: flex; /* Use Flexbox to arrange items in a row */
+  justify-content: space-around; /* Space items evenly */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px; /* Space between items */
+}
+
+.feature {
+  text-align: center; /* Center text in each feature */
+  padding: 20px; /* Space inside each feature box */
+  border: 1px solid #edecec; /* Border around each feature */
+  border-radius: 5px; /* Rounded corners */
+  flex: 1; /* Allow items to grow */
+  min-width: 200px; /* Minimum width for items */
+}
+
+/* Testimonials Section */
+.testimonials {
+  background: #f9f9f9; /* Keeping existing background color */
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #f2f0f0; /* Keeping the existing border */
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px;
+  background: #758173; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #656d64; /* Darker shade for hover effect */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #758173; /* Matching footer color */
+  color: white;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .feature-grid {
+      flex-direction: row; /* Stack items vertically on small screens */
+      align-items: center; /* Center items */
+  }
+
+  .feature {
+      width: 100%; /* Make items full width on small screens */
+  }
+}
+
+/* AdminDashboard.css */
+
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.dashboard-header {
+  background-color: #758173; /* Header background color */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.logout-button {
+  margin-left: 20px;
+  padding: 10px;
+  background-color: #f44336; /* Logout button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dashboard-container {
+  display: flex;
+  flex: 1; /* Fill the remaining space */
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #333; /* Sidebar background color */
+  color: white;
+  padding: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar nav ul li a:hover {
+  text-decoration: underline; /* Underline effect on hover */
+}
+
+.main-content {
+  flex: 1; /* Take the remaining space */
+  padding: 20px;
+  background-color: #f4f4f4; /* Main content background color */
+}
+
+h2 {
+  margin-top: 0;
+}
