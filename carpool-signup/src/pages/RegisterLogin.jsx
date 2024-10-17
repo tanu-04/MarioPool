@@ -25,7 +25,7 @@ const RegisterLogin = () => {
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/users', registerData); // Ensure this matches your API
+      const response = await axios.post('http://localhost:5000/signup', registerData); // Ensure this matches your API
       console.log('User registered successfully:', response.data);
       alert('Registration successful!');
       // Optionally reset form after successful registration
