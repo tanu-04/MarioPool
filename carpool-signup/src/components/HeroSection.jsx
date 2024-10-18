@@ -1,15 +1,17 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from React Router
 
 const HeroSection = () => {
-  const navigate = useNavigate();  // This hook allows navigation between routes.
+  const navigate = useNavigate(); // Initialize the navigate function
 
-  const handleFindRideClick = () => {
-    navigate('/dashboard');  // Navigates to the Dashboard page.
+  // Function to handle navigation to the Find a Ride page
+  const handleFindaRide = () => {
+    navigate('/findaride'); // Navigate to the /findaride route
   };
 
-  const handleStartCarpoolingClick = () => {
-    navigate('/dashboard');  // You can change this if needed.
+  // Function to handle navigation to the Start Carpooling page
+  const handleStartCarpooling = () => {
+    navigate('/startcarpooling'); // Navigate to the /startcarpooling route
   };
 
   return (
@@ -17,12 +19,11 @@ const HeroSection = () => {
       <h2>Join the Carpool Revolution!</h2>
       <p>Save the planet, save money, and make your commute better with MarioPool.</p>
       <div className="cta-buttons">
-        <button onClick={handleFindRideClick}>Find a Ride</button>
-        <button onClick={handleStartCarpoolingClick}>Start Carpooling</button>
+        <button onClick={handleFindaRide}>Find a Ride</button>
+        <button onClick={handleStartCarpooling}>Start Carpooling</button> {/* Button navigates to Start Carpooling */}
       </div>
     </section>
   );
 };
 
 export default HeroSection;
-
